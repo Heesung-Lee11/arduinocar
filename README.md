@@ -16,13 +16,16 @@ pip install PyQt5 opencv-python numpy
 # 실행방법
 python main.py
 
-# GRID 방식의 레이아웃 활용 결과
-### 웹캠을 통하여 자동차의 Grid 레이아웃을 미리 설정해 보았는데 원하는 화면의 배치가 적절하지 않아서 밑에있는 BOX 형식의 레이아웃으로 수정하였습니다.
-![grid활용](./images/grid%20활용.jpg)
+# 간단설명
+EntryPoint는 QmainWindow
+initUI 부분에서 레이아웃과 버튼, 이벤트핸들러를 추가하였습니다.
+update_status 를 통해 기기의 현재상태를 갱신하여 버튼에 표시합니다.
+update_frame 부분에서 아두이노 자동차가 받아온 영상을 처리하여 메인화면에 표시합니다.
+keyPressEvent 부분에서 키보드의 입력을 받아 동작하는 부분을 구현하였습니다.
+haar는 얼굴인식 기능
+line_drive는 라인트레이싱 온오프
+save,delte는 파일 저장삭제기능
+아래 left,right 기능같은 경우 url요청을 통해 차량의 동작을 제어하는 부분입니다.
 
-# BOX 방식의 레이아웃 활용 결과
-### Grid 레이아웃에서 Box 형식으로 전환뒤 각각의 키입력을 아스키코드랑 키설정을 하여 화면에 보이는 현재상태에 동작을 추가하였습니다.
-![hboxs 레이아웃으로](./images/hboxs%20레이아웃으로.jpg)
+버튼또는 키보드로 url에 요청을 하면 웹 서버에서 자동차의 동작을 제어합니다.
 
-# W 키 입력 눌렀을때 화면입니다.
-![Box](./images/Box.jpg)
