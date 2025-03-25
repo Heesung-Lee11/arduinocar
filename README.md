@@ -17,6 +17,7 @@ pip install PyQt5 opencv-python numpy
 python main.py
 
 # 간단설명
+```
 EntryPoint는 QmainWindow
 initUI 부분에서 레이아웃과 버튼, 이벤트핸들러를 추가하였습니다.
 update_status 를 통해 기기의 현재상태를 갱신하여 버튼에 표시합니다.
@@ -28,4 +29,4 @@ save,delte는 파일 저장삭제기능
 아래 left,right 기능같은 경우 url요청을 통해 차량의 동작을 제어하는 부분입니다.
 
 버튼또는 키보드로 url에 요청을 하면 웹 서버에서 자동차의 동작을 제어합니다.
-
+```
